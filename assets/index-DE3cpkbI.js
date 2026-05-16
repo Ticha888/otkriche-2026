@@ -11492,76 +11492,49 @@ function tx({
     onComplete: t
 }) {
     const e = H.useRef(null),
-        n = H.useRef(null),
-        r = H.useRef(null),
-        i = H.useRef(null),
-        s = H.useRef(null),
-        l = H.useRef(null),
-        o = H.useRef(null);
+        n = H.useRef(null);
     return H.useEffect(() => {
-        const a = [n, r, i, s, l, o];
-        a.forEach((c, h) => {
-            c.current && (c.current.style.transform = h % 2 === 0 ? "translateX(-110vw)" : "translateX(110vw)", c.current.style.opacity = "1")
-        }), Ee.timeline({
+        const i = Ee.timeline({
             onComplete: () => {
                 t && t()
             }
-        }).to(a.map(c => c.current), {
-            x: c => c % 2 === 0 ? "-12vw" : "12vw",
-            duration: 1.8,
-            ease: "expo.out",
-            stagger: .06
-        }).to(a.map(c => c.current), {
-            x: c => c % 2 === 0 ? "-6vw" : "6vw",
-            duration: .6,
-            ease: "power1.inOut"
-        }, "+=0.1").to(e.current, {
-            yPercent: 100,
+        });
+        Ee.set(n.current, {
+            opacity: 0,
+            scale: .8
+        }), i.to(n.current, {
+            opacity: 1,
+            scale: 1,
             duration: 1,
-            ease: "power4.inOut"
-        }, "+=0.2").set(e.current, {
+            ease: "power2.out"
+        }).to(n.current, {
+            scale: 1.05,
+            opacity: .8,
+            duration: 1.2,
+            repeat: 2,
+            yoyo: !0,
+            ease: "sine.inOut"
+        }).to(n.current, {
+            scale: 1,
+            opacity: 1,
+            duration: .8,
+            ease: "power2.inOut"
+        }).to(e.current, {
+            opacity: 0,
+            duration: 1.5,
+            ease: "power2.inOut"
+        }).set(e.current, {
             display: "none"
         })
-    }, []), w.jsxs("div", {
+    }, []), w.jsx("div", {
         ref: e,
         className: "loading-wrapper",
-        children: [w.jsxs("div", {
+        children: w.jsx("img", {
             ref: n,
-            className: "loading-row",
-            children: ["OTKRIĆE", w.jsx("span", {
-                children: "   OTKRIĆE   "
-            }), "OTKRIĆE"]
-        }), w.jsxs("div", {
-            ref: r,
-            className: "loading-row loading-row-outlined",
-            children: ["FESTIVAL", w.jsx("span", {
-                children: "   FESTIVAL   "
-            }), "FESTIVAL"]
-        }), w.jsxs("div", {
-            ref: i,
-            className: "loading-row",
-            children: ["OTKRIĆE", w.jsx("span", {
-                children: "   OTKRIĆE   "
-            }), "OTKRIĆE"]
-        }), w.jsxs("div", {
-            ref: s,
-            className: "loading-row loading-row-outlined",
-            children: ["FESTIVAL", w.jsx("span", {
-                children: "   FESTIVAL   "
-            }), "FESTIVAL"]
-        }), w.jsxs("div", {
-            ref: l,
-            className: "loading-row",
-            children: ["OTKRIĆE", w.jsx("span", {
-                children: "   OTKRIĆE   "
-            }), "OTKRIĆE"]
-        }), w.jsxs("div", {
-            ref: o,
-            className: "loading-row loading-row-outlined",
-            children: ["FESTIVAL", w.jsx("span", {
-                children: "   FESTIVAL   "
-            }), "FESTIVAL"]
-        })]
+            src: "/assets/logo-otkrice.svg",
+            className: "loading-logo",
+            alt: "Otkriće Logo"
+        })
     })
 }
 Ee.registerPlugin(Q);
@@ -11864,8 +11837,7 @@ const bp = {
             src: "/assets/images/image27.png"
         }, {
             src: "/assets/images/image28.png"
-        }],
-        [{
+        }, {
             src: "/assets/images/image35.png"
         }]
     ],
