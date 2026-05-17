@@ -11446,20 +11446,37 @@ function ex({
     return w.jsxs("nav", {
         ref: o,
         className: `navigation-top${a ? " nav-visible" : " nav-hidden"}`,
-        children: [w.jsxs("button", {
-            ref: n,
-            className: "menu-toggle",
-            onClick: e,
-            "aria-label": t ? "Close menu" : "Open menu",
-            children: [w.jsx("span", {
-                ref: i,
-                className: "menu-text",
-                children: "Menu"
-            }), w.jsx("img", {
-                ref: r,
-                src: "/assets/nav-logo.svg",
-                alt: "Otkrice",
-                className: "menu-logo"
+        children: [w.jsxs("div", {
+            className: "nav-top-buttons-wrapper",
+            children: [w.jsx("a", {
+                href: "#tickets",
+                onClick: _ => {
+                    _.preventDefault();
+                    const m = document.getElementById("tickets");
+                    m && (window._lenis ? window._lenis.scrollTo(m, {
+                        offset: -80
+                    }) : m.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    }))
+                },
+                className: "nav-ticket-btn",
+                children: "GET TICKET"
+            }), w.jsxs("button", {
+                ref: n,
+                className: "menu-toggle",
+                onClick: e,
+                "aria-label": t ? "Close menu" : "Open menu",
+                children: [w.jsx("span", {
+                    ref: i,
+                    className: "menu-text",
+                    children: "Menu"
+                }), w.jsx("img", {
+                    ref: r,
+                    src: "/assets/nav-logo.svg",
+                    alt: "Otkrice",
+                    className: "menu-logo"
+                })]
             })]
         }), w.jsx("div", {
             ref: s,
@@ -11718,23 +11735,60 @@ function ix() {
                         })
                     }, s))
                 })
-            }), w.jsx("div", {
+            }), w.jsxs("div", {
                 ref: n,
                 className: "hero-center",
-                children: w.jsx("img", {
+                children: [w.jsx("img", {
                     src: nx,
                     alt: "Otkriće Festival",
                     className: "hero-wordmark"
-                })
-            }), w.jsx("div", {
+                }), w.jsx("a", {
+                    href: "#tickets",
+                    onClick: l => {
+                        l.preventDefault(), r("tickets")
+                    },
+                    className: "hero-center-cta",
+                    children: "GET YOUR TICKET"
+                })]
+            }), w.jsxs("div", {
                 className: "hero-corner-block hero-bottom-left",
-                children: w.jsx("a", {
+                children: [w.jsx("a", {
                     href: "https://es.ra.co/events/2224720",
                     target: "_blank",
                     rel: "noreferrer",
                     className: "hero-ticket-link",
                     children: "Tickets on RA ↗"
-                })
+                }), w.jsx("a", {
+                    href: "https://www.instagram.com/otkriche.festival/",
+                    target: "_blank",
+                    rel: "noreferrer",
+                    className: "hero-instagram-link",
+                    children: w.jsxs("svg", {
+                        width: "20",
+                        height: "20",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        stroke: "currentColor",
+                        strokeWidth: "2",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        children: [w.jsx("rect", {
+                            x: "2",
+                            y: "2",
+                            width: "20",
+                            height: "20",
+                            rx: "5",
+                            ry: "5"
+                        }), w.jsx("path", {
+                            d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                        }), w.jsx("line", {
+                            x1: "17.5",
+                            y1: "6.5",
+                            x2: "17.51",
+                            y2: "6.5"
+                        })]
+                    })
+                })]
             })]
         })
     })
@@ -12288,11 +12342,20 @@ function dx() {
                 }), w.jsx("p", {
                     children: "Limited invitations available. Join the discovery."
                 }), w.jsx("a", {
-                    href: "https://es.ra.co/events/2224720",
+                    title: "Online ticketing software",
+                    href: "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=2e6d65",
+                    className: "weezevent-widget-integration",
+                    "data-src": "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=2e6d65",
+                    "data-width": "650",
+                    "data-height": "600",
+                    "data-id": "2036561",
+                    "data-resize": "1",
+                    "data-width_auto": "1",
+                    "data-noscroll": "0",
+                    "data-use-container": "yes",
+                    "data-type": "neo",
                     target: "_blank",
-                    rel: "noreferrer",
-                    className: "mp-btn mp-btn-primary",
-                    children: "GET YOUR TICKET"
+                    children: "Billetterie Weezevent"
                 })]
             })
         }), w.jsxs("section", {
@@ -12554,6 +12617,10 @@ function dx() {
                             })
                         })
                     })]
+                }), w.jsx("a", {
+                    href: "mailto:otkrichefestival@gmail.com",
+                    className: "mp-footer-email",
+                    children: "otkrichefestival@gmail.com"
                 }), w.jsx("p", {
                     className: "mp-footer-copyright",
                     children: "© 2026 OTKRIĆE FESTIVAL, MONTENEGRO"
