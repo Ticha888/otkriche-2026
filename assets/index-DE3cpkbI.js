@@ -11750,15 +11750,18 @@ function ix() {
                     className: "hero-center-cta",
                     children: "GET YOUR TICKET"
                 })]
-            }), w.jsxs("div", {
+            }), w.jsx("div", {
                 className: "hero-corner-block hero-bottom-left",
-                children: [w.jsx("a", {
+                children: w.jsx("a", {
                     href: "https://es.ra.co/events/2224720",
                     target: "_blank",
                     rel: "noreferrer",
                     className: "hero-ticket-link",
                     children: "Tickets on RA ↗"
-                }), w.jsx("a", {
+                })
+            }), w.jsx("div", {
+                className: "hero-corner-block hero-bottom-right",
+                children: w.jsx("a", {
                     href: "https://www.instagram.com/otkriche.festival/",
                     target: "_blank",
                     rel: "noreferrer",
@@ -11788,7 +11791,7 @@ function ix() {
                             y2: "6.5"
                         })]
                     })
-                })]
+                })
             })]
         })
     })

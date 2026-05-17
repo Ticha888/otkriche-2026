@@ -452,10 +452,7 @@
 
 .hero-bottom-left {
     bottom: 2rem;
-    left: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem
+    left: 2rem
 }
 
 .hero-instagram-link {
