@@ -962,7 +962,7 @@
 }
 
 .mp-about-card:last-child {
-    background: #c8e6d9
+    background: #646464
 }
 
 .mp-about-card-bg {
@@ -2305,11 +2305,11 @@
     max-width: 700px
 }
 
-.mp-tickets-inner > *:last-child {
+.mp-tickets-inner>*:last-child {
     margin-top: calc(var(--heading-margin-bottom) - 1.5rem)
 }
 
-.mp-tickets-inner > div,
+.mp-tickets-inner>div,
 .mp-tickets-inner iframe {
     width: 100% !important;
 }
@@ -2368,11 +2368,11 @@
     gap: 1.5rem
 }
 
-.mp-location-inner > div:first-child .mp-label {
+.mp-location-inner>div:first-child .mp-label {
     margin-bottom: 0
 }
 
-.mp-location-inner > div:nth-child(2) {
+.mp-location-inner>div:nth-child(2) {
     margin-bottom: calc(var(--heading-margin-bottom) - 1.5rem)
 }
 
@@ -2638,11 +2638,12 @@ button {
 }
 
 @media (max-width: 768px) {
+
     /* 1. Remove left menu */
     .hero-left-mid {
         display: none !important;
     }
-    
+
     /* 2. Remove carousel on scroll */
     .hero-carousel {
         display: none !important;
@@ -2666,7 +2667,7 @@ button {
     .navigation-top.nav-hidden .nav-ticket-btn {
         display: none !important;
     }
-    
+
     /* 4. Burger menu instead of (menu) button */
     .menu-text {
         font-size: 0 !important;
@@ -2676,6 +2677,7 @@ button {
         display: inline-block;
         position: relative;
     }
+
     .menu-text::before {
         content: "";
         position: absolute;
@@ -2696,23 +2698,24 @@ button {
         right: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        background: rgba(0, 0, 0, 0.6) !important; /* Overlay backdrop */
+        background: rgba(0, 0, 0, 0.6) !important;
+        /* Overlay backdrop */
         backdrop-filter: blur(4px) !important;
         -webkit-backdrop-filter: blur(4px) !important;
         z-index: 999999 !important;
-        
+
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-end !important;
         padding: 0 !important;
-        
+
         transform: none !important;
         opacity: 0 !important;
         visibility: hidden !important;
         pointer-events: none !important;
         transition: opacity 0.4s ease, visibility 0.4s ease !important;
     }
-    
+
     .menu-items.open {
         opacity: 1 !important;
         visibility: visible !important;
@@ -2728,9 +2731,9 @@ button {
         border-radius: 24px 24px 0 0 !important;
         padding: 3rem 1.5rem 3rem 1.5rem !important;
         border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-        box-shadow: 0 -10px 40px rgba(0,0,0,0.5) !important;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5) !important;
         position: relative !important;
-        
+
         transform: translateY(100%) !important;
         transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1) !important;
     }
@@ -2756,7 +2759,7 @@ button {
         text-align: left !important;
         font-size: 1.4rem !important;
         padding: 1.2rem 1rem !important;
-        border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
         display: block !important;
     }
 
@@ -2777,7 +2780,7 @@ button {
         transform: none !important;
         z-index: 10 !important;
     }
-    
+
     .menu-close-btn {
         background: transparent !important;
         border: none !important;
@@ -2792,7 +2795,7 @@ button {
         justify-content: center !important;
         transition: color 0.3s ease !important;
     }
-    
+
     .menu-close-btn:hover {
         color: var(--color-accent-teal) !important;
     }
@@ -2808,7 +2811,7 @@ button {
         margin: 0.5rem 0 0 0 !important;
         text-transform: uppercase !important;
         text-align: center !important;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 }
 
