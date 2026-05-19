@@ -643,7 +643,7 @@
 .mp-section {
     position: relative;
     z-index: 1;
-    padding: 12vh 6vw;
+    padding: 0 var(--section-spacing-x);
     background: transparent
 }
 
@@ -653,7 +653,7 @@
     color: var(--color-accent-teal);
     text-transform: uppercase;
     letter-spacing: .22em;
-    margin-bottom: 6vh
+    margin-bottom: var(--heading-margin-bottom)
 }
 
 .mp-btn {
@@ -872,8 +872,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
-    padding: 18vh 0 0;
+    gap: var(--heading-margin-bottom);
+    padding: var(--section-spacing-y) 0 0;
     background: transparent;
     position: relative
 }
@@ -1093,8 +1093,8 @@
 
 .mp-gallery {
     position: relative;
-    min-height: 100vh;
-    padding: 12vh 6vw 12vh;
+    /* min-height: 100vh; */
+    padding: var(--section-spacing-y) var(--section-spacing-x) 0;
     background: #0a0c0a;
     display: flex;
     flex-direction: column;
@@ -1106,15 +1106,17 @@
 .mp-gallery-header {
     text-align: left;
     flex-shrink: 0;
-    margin-bottom: 6vh;
+    margin-bottom: var(--heading-margin-bottom);
 }
 
 .mp-gallery-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 400;
     color: var(--color-accent-teal);
-    letter-spacing: .15em;
-    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    /* margin-bottom: var(--heading-margin-bottom); */
+    /* margin: 0; */
 }
 
 .mp-gallery-grid-container {
@@ -1405,15 +1407,15 @@
 }
 
 .mp-stages {
-    padding: 0 6vw 12vh;
+    padding: var(--section-spacing-y) var(--section-spacing-x);
     border-top: 1px solid rgba(255, 255, 255, .05);
     background: #0a0c0a;
     margin-top: 0
 }
 
 .mp-stages-header {
-    margin-bottom: 6vh;
-    padding-top: 12vh
+    margin-bottom: var(--heading-margin-bottom);
+    padding-top: 0
 }
 
 .mp-stages-title {
@@ -1643,7 +1645,7 @@
 }
 
 .mp-experience {
-    padding: 12vh 6vw;
+    padding: var(--section-spacing-y) var(--section-spacing-x);
     border-top: 1px solid rgba(255, 255, 255, .05)
 }
 
@@ -1803,13 +1805,13 @@
 }
 
 .mp-faq {
-    padding: 8vh 0;
+    padding: var(--section-spacing-y) 0;
     background: #0a0c0a
 }
 
 .mp-faq-header {
     text-align: center;
-    margin-bottom: 4rem
+    margin-bottom: var(--heading-margin-bottom)
 }
 
 .mp-faq-title {
@@ -2206,7 +2208,8 @@
 }
 
 .mp-ways {
-    border-top: 1px solid rgba(255, 255, 255, .05)
+    /* border-top: 1px solid rgba(255, 255, 255, .05); */
+    padding: 0 var(--section-spacing-x);
 }
 
 .mp-ways-grid {
@@ -2251,7 +2254,7 @@
     align-items: center;
     justify-content: center;
     min-height: 80vh;
-    padding: 12vh 8vw;
+    padding: var(--section-spacing-y) var(--section-spacing-x);
     border-top: 1px solid rgba(255, 255, 255, .05);
     background-image: url(/assets/images/image2.png);
     background-size: cover;
@@ -2280,9 +2283,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
     width: 100%;
     max-width: 700px
+}
+
+.mp-tickets-inner > *:last-child {
+    margin-top: calc(var(--heading-margin-bottom) - 1.5rem)
 }
 
 .mp-tickets-inner > div,
@@ -2307,6 +2314,16 @@
     margin: 0
 }
 
+.mp-tickets-date {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 300;
+    color: var(--color-accent-teal);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-top: -1.5rem;
+    margin-bottom: -1rem
+}
+
 .mp-tickets-inner p {
     font-size: 1rem;
     font-weight: 300;
@@ -2324,14 +2341,22 @@
     grid-template-columns: 1fr 1.2fr;
     gap: 8vw;
     align-items: stretch;
-    padding: 12vh 8vw
+    padding: var(--section-spacing-y) var(--section-spacing-x)
 }
 
 .mp-location-inner {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3rem
+    gap: 1.5rem
+}
+
+.mp-location-inner > div:first-child .mp-label {
+    margin-bottom: 0
+}
+
+.mp-location-inner > div:nth-child(2) {
+    margin-bottom: calc(var(--heading-margin-bottom) - 1.5rem)
 }
 
 .mp-location-name {
@@ -2401,9 +2426,15 @@
 }
 
 @media (max-width: 900px) {
-    .mp-section {
-        padding: 8vh 4vw
+    :root {
+        --section-spacing-y: clamp(4rem, 8vh, 6rem);
+        --section-spacing-x: 4vw;
+        --heading-margin-bottom: clamp(2rem, 5vh, 3rem);
     }
+
+    /* .mp-section {
+        padding: var(--section-spacing-y) var(--section-spacing-x)
+    } */
 
     .mp-about-inner,
     .mp-tickets,
@@ -2518,7 +2549,12 @@ body:before {
     --color-accent-teal: #81e6d9;
     --color-text-main: #f8fafc;
     --color-text-muted: #64748b;
-    --font-main: "Outfit", sans-serif
+    --font-main: "Outfit", sans-serif;
+
+    /* Spacing system tokens */
+    --section-spacing-y: clamp(5rem, 12vh, 8rem);
+    --section-spacing-x: 6vw;
+    --heading-margin-bottom: clamp(2.5rem, 6vh, 4rem);
 }
 
 * {

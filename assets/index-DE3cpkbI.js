@@ -12131,7 +12131,7 @@ function dx() {
                     }
                 })
             }), Ee.utils.toArray("[data-reveal]").forEach(g => {
-                Ee.fromTo(g, {
+                window.innerWidth > 768 && Ee.fromTo(g, {
                     yPercent: 105
                 }, {
                     yPercent: 0,
@@ -12360,6 +12360,9 @@ function dx() {
                 children: [w.jsx("h2", {
                     className: "mp-tickets-heading",
                     children: "Otkriće Tickets"
+                }), w.jsx("div", {
+                    className: "mp-tickets-date",
+                    children: "14–16 August 2026"
                 }), w.jsx("p", {
                     children: "Limited invitations available. Join the discovery."
                 }), w.jsx("a", {
