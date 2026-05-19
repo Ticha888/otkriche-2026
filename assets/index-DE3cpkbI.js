@@ -12483,7 +12483,7 @@ function dx() {
                 className: "mp-ways-grid",
                 children: [{
                     title: "Buy a ticket",
-                    desc: "Secure your access to Lightland Park. Available on Resident Advisor or on this site",
+                    desc: "Secure your access to Lightland Park. Available here or on Resident Advisor",
                     links: [{
                         cta: "Buy on RA",
                         href: "https://es.ra.co/events/2224720"
@@ -12493,7 +12493,7 @@ function dx() {
                     }]
                 }, {
                     title: "Apply for the open call",
-                    desc: "Support the vision. Help co-create this festival from the inside. Volunteer, vendor space, or media pass — shape the experience from within.",
+                    desc: "Slots for shapers, volunteers, photographers, videographers, visual and digital artists are still available",
                     links: [{
                         cta: "Apply for the open call",
                         href: "https://linktr.ee/otkriche.festival"
