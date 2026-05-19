@@ -11618,20 +11618,7 @@ const nx = "/assets/logo-otkrice.svg",
 function ix() {
     const t = H.useRef(null),
         e = H.useRef([]),
-        n = H.useRef(null),
-        v = H.useRef(null);
-    H.useEffect(() => {
-        const video = v.current;
-        if (video) {
-            video.muted = !0;
-            video.setAttribute("muted", "");
-            video.play().catch(o => {});
-            const a = () => {
-                video.play(), window.removeEventListener("touchstart", a), window.removeEventListener("click", a)
-            };
-            window.addEventListener("touchstart", a), window.addEventListener("click", a)
-        }
-    }, []);
+        n = H.useRef(null);
     H.useEffect(() => {
         const i = Ee.context(() => {
             Ee.fromTo(".hero-corner-block", {
@@ -11705,20 +11692,10 @@ function ix() {
         className: "hero-p5",
         children: w.jsxs("div", {
             className: "hero-frame",
-            children: [w.jsxs("video", {
-                ref: v,
+            children: [w.jsx("img", {
                 className: "hero-video-bg",
-                autoPlay: !0,
-                loop: !0,
-                muted: !0,
-                playsInline: !0,
-                children: [w.jsx("source", {
-                    src: "/assets/background-animation.mp4",
-                    type: "video/mp4"
-                }), w.jsx("source", {
-                    src: "/assets/background-animation.webm",
-                    type: "video/webm"
-                })]
+                src: "/assets/background-animation-opt.gif",
+                alt: "Background animation"
             }), w.jsx("div", {
                 className: "hero-carousel",
                 children: Xp.map((i, s) => w.jsx("div", {
@@ -12390,9 +12367,9 @@ function dx() {
                     children: "Limited invitations available. Join the discovery."
                 }), w.jsx("a", {
                     title: "Online ticketing software",
-                    href: "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=2e6d65",
+                    href: "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=c1c1c1",
                     className: "weezevent-widget-integration",
-                    "data-src": "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=2e6d65",
+                    "data-src": "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=c1c1c1",
                     "data-width": "650",
                     "data-height": "600",
                     "data-id": "2036561",

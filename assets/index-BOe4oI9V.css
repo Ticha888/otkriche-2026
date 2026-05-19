@@ -206,7 +206,7 @@
 
 .loading-row-outlined {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1.5px rgba(129, 230, 217, .7)
+    -webkit-text-stroke: 1.5px rgba(193, 193, 193, .7)
 }
 
 .loading-row span {
@@ -215,7 +215,7 @@
 }
 
 .loading-row-outlined span {
-    -webkit-text-stroke: 1px rgba(129, 230, 217, .15)
+    -webkit-text-stroke: 1px rgba(193, 193, 193, .15)
 }
 
 .hero-p5 {
@@ -476,7 +476,7 @@
     color: var(--color-accent-teal);
     text-decoration: none;
     letter-spacing: .04em;
-    border-bottom: 1px solid rgba(129, 230, 217, .35);
+    border-bottom: 1px solid rgba(193, 193, 193, .35);
     padding-bottom: 2px;
     transition: all .3s ease
 }
@@ -610,7 +610,7 @@
     height: 60vw;
     max-width: 750px;
     max-height: 750px;
-    background: radial-gradient(circle at 40% 40%, rgba(129, 230, 217, .07) 0%, transparent 65%);
+    background: radial-gradient(circle at 40% 40%, rgba(193, 193, 193, .07) 0%, transparent 65%);
     top: -20vh;
     right: -15vw
 }
@@ -630,7 +630,7 @@
     height: 40vw;
     max-width: 520px;
     max-height: 520px;
-    background: radial-gradient(circle at 50% 50%, rgba(129, 230, 217, .05) 0%, transparent 65%);
+    background: radial-gradient(circle at 50% 50%, rgba(193, 193, 193, .05) 0%, transparent 65%);
     top: 130vh;
     right: 5vw
 }
@@ -679,7 +679,7 @@
 }
 
 .mp-btn:hover {
-    background: #81e6d91a;
+    background: #c1c1c11a;
     border-color: var(--color-accent-teal);
     color: var(--color-accent-teal)
 }
@@ -768,7 +768,7 @@
     align-items: center;
     justify-content: center;
     will-change: transform, filter, opacity;
-    box-shadow: 0 0 100px #81e6d90f, inset 0 1px #ffffff14
+    box-shadow: 0 0 100px #c1c1c10f, inset 0 1px #ffffff14
 }
 
 .hero-glass-inner {
@@ -809,7 +809,7 @@
     letter-spacing: -.03em;
     line-height: .95;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px rgba(129, 230, 217, .6);
+    -webkit-text-stroke: 2px rgba(193, 193, 193, .6);
     color: transparent
 }
 
@@ -1197,7 +1197,7 @@
 }
 
 .mp-gallery-dot:hover {
-    background: #81e6d999;
+    background: #c1c1c199;
     transform: scale(1.2)
 }
 
@@ -1330,7 +1330,7 @@
 }
 
 .mp-lightbox-close:hover {
-    background: #81e6d94d;
+    background: #c1c1c14d;
     color: var(--color-accent-teal);
     transform: rotate(90deg)
 }
@@ -2051,7 +2051,7 @@
 }
 
 .hcard:hover {
-    background: #81e6d904
+    background: #c1c1c104
 }
 
 .hcard-intro {
@@ -2213,7 +2213,7 @@
 
 .lineup-featured .lineup-name {
     font-weight: 500;
-    -webkit-text-stroke: 1px rgba(129, 230, 217, .4)
+    -webkit-text-stroke: 1px rgba(193, 193, 193, .4)
 }
 
 .mp-lineup-tba {
@@ -2248,7 +2248,7 @@
 }
 
 .mp-way-card:hover {
-    background: #81e6d908
+    background: #c1c1c108
 }
 
 .mp-way-card h3 {
@@ -2554,7 +2554,7 @@ body:before {
     height: 100%;
     width: 0%;
     background: var(--color-accent-teal);
-    box-shadow: 0 0 10px #81e6d980;
+    box-shadow: 0 0 10px #c1c1c180;
     will-change: width
 }
 
@@ -2563,7 +2563,7 @@ body:before {
     --color-bg-panel: rgba(15, 18, 15, .4);
     --color-light-accent: #e2e8f0;
     --color-mystic-glow: rgba(167, 243, 208, .3);
-    --color-accent-teal: #81e6d9;
+    --color-accent-teal: #c1c1c1;
     --color-text-main: #f8fafc;
     --color-text-muted: #64748b;
     --font-main: "Outfit", sans-serif;
@@ -2632,7 +2632,7 @@ button {
 }
 
 .hero-cta:hover {
-    background: #81e6d91a;
+    background: #c1c1c11a;
     border-color: var(--color-accent-teal);
     color: var(--color-accent-teal);
 }
