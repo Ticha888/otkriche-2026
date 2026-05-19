@@ -11709,9 +11709,6 @@ function ix() {
             }), w.jsxs("div", {
                 className: "hero-corner-block hero-top-left",
                 children: [w.jsx("p", {
-                    className: "hero-site-name",
-                    children: "OTKRIĆE"
-                }), w.jsx("p", {
                     className: "hero-site-sub",
                     children: "Immersive music and visual art festival"
                 })]
@@ -12285,24 +12282,6 @@ function dx() {
                             children: "Night"
                         }), w.jsx("p", {
                             children: "When the sun yields, the shadows dance. High-fidelity soundscapes that pulse with the rhythm of the hidden forest."
-                        }), w.jsxs("div", {
-                            className: "mp-about-card-tags",
-                            children: [w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Dub Techno"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Hypnotic"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Markets"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#3 Music Stages"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Techno"
-                            })]
                         })]
                     })]
                 }), w.jsxs("div", {
@@ -12318,28 +12297,7 @@ function dx() {
                         children: [w.jsx("h3", {
                             children: "Day"
                         }), w.jsx("p", {
-                            children: "Soft & spacious, full of workshops, practices and warm music vibes. Easy listening that flows with sounds gently through the space."
-                        }), w.jsxs("div", {
-                            className: "mp-about-card-tags",
-                            children: [w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Morning Yoga"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Ambient Chill"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Dub Techno"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Exhibition"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Food"
-                            }), w.jsx("span", {
-                                className: "mp-about-tag",
-                                children: "#Markets"
-                            })]
+                            children: "Soft and spacious, full of workshops, practices and warm music vibes. Easy listening that flows with sounds gently through the space."
                         })]
                     })]
                 })]

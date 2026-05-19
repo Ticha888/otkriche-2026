@@ -653,11 +653,11 @@
 }
 
 .mp-label {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #f8fafc;
     text-transform: uppercase;
-    letter-spacing: .22em;
+    letter-spacing: -.02em;
     margin-bottom: var(--heading-margin-bottom)
 }
 
@@ -923,7 +923,7 @@
 
 .mp-about-title {
     font-family: var(--font-main);
-    font-size: clamp(1.1rem, 4.4vw, 3.8rem);
+    font-size: clamp(2.5rem, 4.4vw, 3.8rem);
     font-weight: 300;
     color: #fff;
     line-height: 1.1;
