@@ -11918,19 +11918,39 @@ const bp = {
     ],
     ax = [{
         question: "Can I leave the festival and re-enter it?",
-        answer: "Yes while your bracelet holds it.",
+        answer: "Yes while your bracelet is active",
         isHtml: !1
     }, {
-        question: "Are there food and bars?",
-        answer: "Yes foodcourt and restaurant.",
+        question: "How do I get to the venue?",
+        answer: "Taxi rides is an easy way of getting to the festival, also transfer buses during the certain hours will be organised",
         isHtml: !1
     }, {
-        question: "Do I need warm and waterproof clothing?",
-        answer: "Yes — it can get cold at night, and conditions may be wet, so we recommend bringing warm and waterproof clothes.",
+        question: "Will there be food and bar spots at the festival?",
+        answer: "Besides constant Light Land restaurant area, several bars and foodcourt spots will be organised",
         isHtml: !1
     }, {
-        question: "Is there a way to join as a volunteer, shaper, photographer, exhibition artist etc and participate for free?",
-        answer: 'Yes, to do this, fill out the appropriate form <a href="#ways-to-join" style="color: var(--color-accent-teal); text-decoration: underline;">here</a>',
+        question: "Should I bring warm and waterproof clothes?",
+        answer: "Yes, totally, the temperature drops at night and it might rain, so it's essential to bring warm and waterproof clothes",
+        isHtml: !1
+    }, {
+        question: "What are the payment methods at the festival?",
+        answer: "Otkriće tokens is an official currency at the festival and can be acquired at the festival",
+        isHtml: !1
+    }, {
+        question: "Can I buy the ticket at the entrance?",
+        answer: "Yes, but at a higher cost",
+        isHtml: !1
+    }, {
+        question: "How's the internet connection in the Light Land",
+        answer: "Internet connection is good and stable, but weak at certain places of Light Land.",
+        isHtml: !1
+    }, {
+        question: "What about the camping and possible guesthouse accomodation?",
+        answer: "We'll set a camping hotel with sleeping bags, tents for a price to be announced later",
+        isHtml: !1
+    }, {
+        question: "Is there a way to take part in the festival?",
+        answer: 'Yes, we welcome shapers, volunteers, photographers and videographers, visual and digital artists and masters of practices. The open call for these positions is active until the end of July. <a href="#ways-to-join" style="color: var(--color-accent-teal); text-decoration: underline;">Open Call</a>',
         isHtml: !0
     }];
 
@@ -12024,10 +12044,7 @@ function fx({
                 className: "stage-header-content",
                 children: [w.jsxs("div", {
                     className: "stage-title-row",
-                    children: [w.jsx("span", {
-                        className: "stage-chevron",
-                        children: n ? "∧" : "∨"
-                    }), w.jsx("h3", {
+                    children: [w.jsx("h3", {
                         className: "stage-name",
                         children: t.name
                     })]
@@ -12210,15 +12227,12 @@ function dx() {
                 })
             }), w.jsxs("div", {
                 className: "mp-about-header",
-                children: [w.jsx("p", {
-                    className: "mp-label-teal",
-                    children: "THE PHILOSOPHY"
-                }), w.jsx("h2", {
+                children: [w.jsx("h2", {
                     className: "mp-about-title",
-                    children: "Otkriće is a term for Discovery."
+                    children: "Otkriche is an experience that transcends the ordinary"
                 }), w.jsx("p", {
                     className: "mp-about-subtitle",
-                    children: "We believe that music is not just a performance, but an emergence. Set within the heart of ancient woodlands, our gathering invites you to shed the synthetic world and rediscover the resonance of natural rhythm and sonic exploration."
+                    children: "Set within the heart of ancient woodlands, our gathering invites you to shed the synthetic world and rediscover the resonance of natural rhythm and sonic exploration."
                 })]
             }), w.jsxs("div", {
                 className: "mp-about-cards",
