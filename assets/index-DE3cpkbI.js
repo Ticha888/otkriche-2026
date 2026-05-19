@@ -11618,7 +11618,20 @@ const nx = "/assets/logo-otkrice.svg",
 function ix() {
     const t = H.useRef(null),
         e = H.useRef([]),
-        n = H.useRef(null);
+        n = H.useRef(null),
+        v = H.useRef(null);
+    H.useEffect(() => {
+        const video = v.current;
+        if (video) {
+            video.muted = !0;
+            video.setAttribute("muted", "");
+            video.play().catch(o => {});
+            const a = () => {
+                video.play(), window.removeEventListener("touchstart", a), window.removeEventListener("click", a)
+            };
+            window.addEventListener("touchstart", a), window.addEventListener("click", a)
+        }
+    }, []);
     H.useEffect(() => {
         const i = Ee.context(() => {
             Ee.fromTo(".hero-corner-block", {
@@ -11693,17 +11706,18 @@ function ix() {
         children: w.jsxs("div", {
             className: "hero-frame",
             children: [w.jsxs("video", {
+                ref: v,
                 className: "hero-video-bg",
                 autoPlay: !0,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
                 children: [w.jsx("source", {
-                    src: "/assets/background-animation.webm",
-                    type: "video/webm"
-                }), w.jsx("source", {
                     src: "/assets/background-animation.mp4",
                     type: "video/mp4"
+                }), w.jsx("source", {
+                    src: "/assets/background-animation.webm",
+                    type: "video/webm"
                 })]
             }), w.jsx("div", {
                 className: "hero-carousel",
@@ -12492,7 +12506,7 @@ function dx() {
                     }]
                 }, {
                     title: "Buy Ticket",
-                    desc: "Secure your access to Lightland Park. Available on Resident Advisor.",
+                    desc: "Secure your access to Lightland Park. Available on Resident Advisor or on this site",
                     links: [{
                         cta: "Buy on RA",
                         href: "https://es.ra.co/events/2224720"
