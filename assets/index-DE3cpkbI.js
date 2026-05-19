@@ -11570,31 +11570,31 @@ function tx({
 Ee.registerPlugin(Q);
 const nx = "/assets/logo-otkrice.svg",
     Xp = [{
-        src: "/assets/images/image25.png",
+        src: "/assets/images/image25.webp",
         size: "small",
         track: "middle",
         delay: 0,
         speed: 1.4
     }, {
-        src: "/assets/images/image2.png",
+        src: "/assets/images/image2.webp",
         size: "small",
         track: "top",
         delay: .1,
         speed: 1.4
     }, {
-        src: "/assets/images/image35.png",
+        src: "/assets/images/image35.webp",
         size: "small",
         track: "bottom",
         delay: .2,
         speed: 1.5
     }, {
-        src: "/assets/images/image4.png",
+        src: "/assets/images/image4.webp",
         size: "small",
         track: "middle",
         delay: .3,
         speed: 1.3
     }, {
-        src: "/assets/images/image1.png",
+        src: "/assets/images/image1.webp",
         size: "small",
         track: "top",
         delay: .4,
@@ -11692,10 +11692,19 @@ function ix() {
         className: "hero-p5",
         children: w.jsxs("div", {
             className: "hero-frame",
-            children: [w.jsx("img", {
-                src: "/assets/background-animation.gif",
-                alt: "",
-                className: "hero-video-bg"
+            children: [w.jsxs("video", {
+                className: "hero-video-bg",
+                autoPlay: !0,
+                loop: !0,
+                muted: !0,
+                playsInline: !0,
+                children: [w.jsx("source", {
+                    src: "/assets/background-animation.webm",
+                    type: "video/webm"
+                }), w.jsx("source", {
+                    src: "/assets/background-animation.mp4",
+                    type: "video/mp4"
+                })]
             }), w.jsx("div", {
                 className: "hero-carousel",
                 children: Xp.map((i, s) => w.jsx("div", {
@@ -11884,36 +11893,36 @@ const bp = {
     }],
     Qp = [
         [{
-            src: "/assets/images/image1.png"
+            src: "/assets/images/image1.webp"
         }, {
-            src: "/assets/images/image2.png"
+            src: "/assets/images/image2.webp"
         }, {
-            src: "/assets/images/image4.png"
+            src: "/assets/images/image4.webp"
         }, {
-            src: "/assets/images/image5.png"
+            src: "/assets/images/image5.webp"
         }, {
-            src: "/assets/images/image7.png"
+            src: "/assets/images/image7.webp"
         }, {
-            src: "/assets/images/image9.png"
+            src: "/assets/images/image9.webp"
         }, {
-            src: "/assets/images/image16.png"
+            src: "/assets/images/image16.webp"
         }, {
-            src: "/assets/images/image19.png"
+            src: "/assets/images/image19.webp"
         }],
         [{
-            src: "/assets/images/image21.png"
+            src: "/assets/images/image21.webp"
         }, {
-            src: "/assets/images/image24.png"
+            src: "/assets/images/image24.webp"
         }, {
-            src: "/assets/images/image25.png"
+            src: "/assets/images/image25.webp"
         }, {
-            src: "/assets/images/image26.png"
+            src: "/assets/images/image26.webp"
         }, {
-            src: "/assets/images/image27.png"
+            src: "/assets/images/image27.webp"
         }, {
-            src: "/assets/images/image28.png"
+            src: "/assets/images/image28.webp"
         }, {
-            src: "/assets/images/image35.png"
+            src: "/assets/images/image35.webp"
         }]
     ],
     ax = [{
@@ -12401,7 +12410,7 @@ function dx() {
                     children: [w.jsx("div", {
                         className: "mp-exp-bg",
                         style: {
-                            backgroundImage: "url(/assets/images/image17.png)"
+                            backgroundImage: "url(/assets/images/image17.webp)"
                         }
                     }), w.jsxs("div", {
                         className: "mp-exp-content",
@@ -12416,7 +12425,7 @@ function dx() {
                     children: [w.jsx("div", {
                         className: "mp-exp-bg",
                         style: {
-                            backgroundImage: "url(/assets/images/image9.png)"
+                            backgroundImage: "url(/assets/images/image9.webp)"
                         }
                     }), w.jsxs("div", {
                         className: "mp-exp-content",
@@ -12431,7 +12440,7 @@ function dx() {
                     children: [w.jsx("div", {
                         className: "mp-exp-bg",
                         style: {
-                            backgroundImage: "url(/assets/images/image4.png)"
+                            backgroundImage: "url(/assets/images/image4.webp)"
                         }
                     }), w.jsxs("div", {
                         className: "mp-exp-content",
@@ -12446,7 +12455,7 @@ function dx() {
                     children: [w.jsx("div", {
                         className: "mp-exp-bg",
                         style: {
-                            backgroundImage: "url(/assets/images/image22.png)"
+                            backgroundImage: "url(/assets/images/image22.webp)"
                         }
                     }), w.jsxs("div", {
                         className: "mp-exp-content",

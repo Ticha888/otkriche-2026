@@ -444,7 +444,7 @@
 }
 
 .hero-bottom-right p {
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #ffffff80;
     line-height: 1.6
@@ -471,7 +471,7 @@
 }
 
 .hero-ticket-link {
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--color-accent-teal);
     text-decoration: none;
@@ -509,6 +509,11 @@
     .logo3d-mount canvas {
         width: 80px !important;
         height: 80px !important
+    }
+
+    .hero-bottom-right p,
+    .hero-ticket-link {
+        font-size: 1rem
     }
 }
 
@@ -947,7 +952,7 @@
 
 .mp-about-card {
     position: relative;
-    min-height: 50vh;
+    min-height: 38vh;
     overflow: hidden;
     transition: all .6s cubic-bezier(.4, 0, .2, 1)
 }
@@ -994,7 +999,7 @@
 }
 
 .mp-about-card:first-child .mp-about-card-content h3 {
-    font-size: clamp(3rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 300;
     color: #fff;
     margin: 0;
@@ -1003,7 +1008,7 @@
 }
 
 .mp-about-card:last-child .mp-about-card-content h3 {
-    font-size: clamp(3rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 300;
     color: #0a0c0a;
     margin: 0;
@@ -1012,7 +1017,7 @@
 }
 
 .mp-about-card:first-child .mp-about-card-content p {
-    font-size: clamp(.85rem, 1.1vw, .95rem);
+    font-size: clamp(1rem, 1.1vw, .95rem);
     font-weight: 300;
     color: #fff9;
     line-height: 1.8;
@@ -1021,7 +1026,7 @@
 }
 
 .mp-about-card:last-child .mp-about-card-content p {
-    font-size: clamp(.85rem, 1.1vw, .95rem);
+    font-size: clamp(1rem, 1.1vw, .95rem);
     font-weight: 300;
     color: #0a0c0ab3;
     line-height: 1.8;
@@ -1083,11 +1088,15 @@
     }
 
     .mp-about-card {
-        min-height: 60vh
+        min-height: 45vh
     }
 
     .mp-about-card-content {
         padding: 3rem 2rem
+    }
+
+    .mp-about-card-content p {
+        font-size: 1rem
     }
 }
 
@@ -1479,7 +1488,7 @@
 }
 
 .stage-name {
-    font-size: clamp(2.5rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
     color: var(--color-text-main);
     letter-spacing: -.02em;
@@ -1493,7 +1502,7 @@
 }
 
 .stage-desc {
-    font-size: clamp(.85rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1vw, 1rem);
     font-weight: 300;
     color: #ffffff73;
     line-height: 1.7;
@@ -1766,7 +1775,7 @@
 }
 
 .mp-experience-card h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(2rem, 2.5vw, 2rem);
     font-weight: 300;
     color: var(--color-text-main);
     letter-spacing: -.01em;
@@ -1880,11 +1889,11 @@
 }
 
 .mp-faq-answer p {
-    font-size: .95rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #fff9;
     line-height: 1.7;
-    margin: 0
+    margin: 16px 0 0 0
 }
 
 @keyframes slideDown {
@@ -1978,7 +1987,7 @@
 }
 
 .mp-footer-email {
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #ffffff80;
     text-decoration: none;
@@ -2003,6 +2012,14 @@
     .mp-footer-nav {
         flex-direction: column;
         gap: 1rem
+    }
+
+    .mp-footer-email {
+        font-size: 1rem
+    }
+
+    .stage-desc {
+        font-size: 1rem
     }
 }
 
@@ -2235,7 +2252,7 @@
 }
 
 .mp-way-card h3 {
-    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-size: clamp(2rem, 2.2vw, 2rem);
     font-weight: 300;
     color: var(--color-text-main);
     letter-spacing: -.01em
@@ -2256,7 +2273,7 @@
     min-height: 80vh;
     padding: var(--section-spacing-y) var(--section-spacing-x);
     border-top: 1px solid rgba(255, 255, 255, .05);
-    background-image: url(/assets/images/image2.png);
+    background-image: url(/assets/images/image2.webp);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
