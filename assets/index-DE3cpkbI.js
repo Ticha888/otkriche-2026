@@ -11718,14 +11718,8 @@ function ix() {
             }), w.jsxs("div", {
                 className: "hero-corner-block hero-top-right",
                 children: [w.jsx("p", {
-                    className: "hero-corner-label",
-                    children: "When"
-                }), w.jsx("p", {
                     className: "hero-corner-val",
                     children: "14–16 August"
-                }), w.jsx("p", {
-                    className: "hero-corner-val",
-                    children: "2026"
                 })]
             }), w.jsx("div", {
                 className: "hero-corner-block hero-left-mid",
@@ -11820,45 +11814,75 @@ const bp = {
     night: "/html_backup/images/tild3737-3632-4961-b635-363230353639__img_5908.jpg"
 },
     sx = [{
-        name: "TONY PLUS",
-        url: "https://soundcloud.com/tonyplus",
-        time: "00:00 - 04:00",
-        date: "14/08/2026"
-    }, {
-        name: "IVAN LOGOS",
-        url: "https://soundcloud.com/ivanlogos",
-        time: "00:00 - 04:00",
-        date: "15/08/2026"
-    }, {
-        name: "A'JITAM D'AA",
+        name: "A'jitam Da'a",
         url: "https://soundcloud.com/ajitamdaa",
-        time: "00:00 - 04:00",
-        date: "15/08/2026"
+        time: "",
+        date: "LINEUP"
     }, {
-        name: "MILES PINKERT",
-        url: "https://soundcloud.com/milespinkert",
-        time: "00:00 - 04:00",
-        date: "16/08/2026"
+        name: "BU_MF",
+        url: "",
+        time: "",
+        date: "LINEUP"
     }, {
-        name: "BIZARR DUO",
-        url: "https://soundcloud.com/bizarrdjduo",
-        time: "22:00 - 00:00",
-        date: "14/08/2026"
-    }, {
-        name: "BØNGVR",
+        name: "Bøngvr",
         url: "https://soundcloud.com/bongvr",
-        time: "22:00 - 00:00",
-        date: "15/08/2026"
+        time: "",
+        date: "LINEUP"
     }, {
-        name: "SECCO",
-        url: "https://soundcloud.com/alen_merdan",
-        time: "22:00 - 00:00",
-        date: "15/08/2026"
+        name: "Hohe",
+        url: "https://soundcloud.com/hohe-audio",
+        time: "",
+        date: "LINEUP"
     }, {
-        name: "MAKOVIAN",
-        url: "https://soundcloud.com/makovian",
-        time: "22:00 - 00:00",
-        date: "16/08/2026"
+        name: "G Depot",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "Ata'ru",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "J.Cause",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "Ticha",
+        url: "https://soundcloud.com/ticha_smp",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "Low Services",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "Ph0neme",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "ASLK",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "OA",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "Scepial Needs",
+        url: "",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "TBA",
+        url: "",
+        time: "",
+        date: "LINEUP"
     }],
     lx = [{
         name: "HOHE (Berlin)",
@@ -12076,14 +12100,18 @@ function fx({
                         className: "stage-column-artists",
                         children: c.map((h, f) => w.jsxs("div", {
                             className: "stage-artist-item",
-                            children: [w.jsx("span", {
+                            children: [h.time && w.jsx("span", {
                                 className: "artist-time",
                                 children: h.time
-                            }), w.jsx("a", {
+                            }), h.url ? w.jsx("a", {
                                 href: h.url,
                                 target: "_blank",
                                 rel: "noreferrer",
                                 className: "artist-name",
+                                children: h.name
+                            }) : w.jsx("span", {
+                                className: "artist-name",
+                                style: { cursor: "default", pointerEvents: "none" },
                                 children: h.name
                             })]
                         }, f))
@@ -12496,13 +12524,6 @@ function dx() {
             }), w.jsx("div", {
                 className: "mp-ways-grid",
                 children: [{
-                    title: "Be a shaper",
-                    desc: "Support the vision. Help co-create this festival from the inside. Open Call now live.",
-                    links: [{
-                        cta: "Open Call",
-                        href: "https://linktr.ee/otkriche.festival"
-                    }]
-                }, {
                     title: "Buy a ticket",
                     desc: "Secure your access to Lightland Park. Available on Resident Advisor or on this site",
                     links: [{
@@ -12513,8 +12534,8 @@ function dx() {
                         href: "#tickets"
                     }]
                 }, {
-                    title: "Join us",
-                    desc: "Volunteer, vendor space, or media pass — shape the experience from within.",
+                    title: "Apply for the open call",
+                    desc: "Support the vision. Help co-create this festival from the inside. Volunteer, vendor space, or media pass — shape the experience from within.",
                     links: [{
                         cta: "Open Call",
                         href: "https://linktr.ee/otkriche.festival"
