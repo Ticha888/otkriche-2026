@@ -11816,11 +11816,6 @@ const bp = {
         time: "",
         date: "LINEUP"
     }, {
-        name: "BU_MF",
-        url: "",
-        time: "",
-        date: "LINEUP"
-    }, {
         name: "Bøngvr",
         url: "https://soundcloud.com/bongvr",
         time: "",
@@ -11828,6 +11823,16 @@ const bp = {
     }, {
         name: "Hohe",
         url: "https://soundcloud.com/hohe-audio",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "Ticha",
+        url: "https://soundcloud.com/ticha_smp",
+        time: "",
+        date: "LINEUP"
+    }, {
+        name: "BU_MF",
+        url: "",
         time: "",
         date: "LINEUP"
     }, {
@@ -11843,11 +11848,6 @@ const bp = {
     }, {
         name: "J.Cause",
         url: "",
-        time: "",
-        date: "LINEUP"
-    }, {
-        name: "Ticha",
-        url: "https://soundcloud.com/ticha_smp",
         time: "",
         date: "LINEUP"
     }, {
@@ -12096,7 +12096,7 @@ function fx({
                     }), w.jsx("div", {
                         className: "stage-column-artists",
                         children: c.map((h, f) => w.jsxs("div", {
-                            className: "stage-artist-item",
+                            className: `stage-artist-item ${h.url ? "" : "no-hover"}`,
                             children: [h.time && w.jsx("span", {
                                 className: "artist-time",
                                 children: h.time
@@ -12108,7 +12108,7 @@ function fx({
                                 children: h.name
                             }) : w.jsx("span", {
                                 className: "artist-name",
-                                style: { cursor: "default", pointerEvents: "none" },
+                                style: { cursor: "default", pointerEvents: "none", color: h.name === "TBA" ? "var(--color-text-muted)" : undefined },
                                 children: h.name
                             })]
                         }, f))
@@ -12296,8 +12296,8 @@ function dx() {
                         className: "mp-about-card-content",
                         children: [w.jsx("h3", {
                             children: "Day"
-                        }), w.jsx("p", {
-                            children: "Soft and spacious, full of workshops, practices and warm music vibes. Easy listening that flows with sounds gently through the space."
+                        }), w.jsxs("p", {
+                            children: ["Soft and spacious, full of workshops, practices and warm music vibes.", w.jsx("br", {}), "Easy listening that flows with sounds gently through the space."]
                         })]
                     })]
                 })]

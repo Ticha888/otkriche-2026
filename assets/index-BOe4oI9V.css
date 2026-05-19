@@ -1104,9 +1104,9 @@
 .mp-gallery-title {
     font-size: 2rem;
     font-weight: 400;
-    color: var(--color-accent-teal);
+    color: #f8fafc;
     text-transform: uppercase;
-    letter-spacing: .22em;
+    letter-spacing: -.02em;
     /* margin-bottom: var(--heading-margin-bottom); */
     /* margin: 0; */
 }
@@ -1582,7 +1582,7 @@
     transition: all .3s ease
 }
 
-.stage-artist-item:hover {
+.stage-artist-item:not(.no-hover):hover {
     transform: translate(4px)
 }
 
@@ -1604,7 +1604,7 @@
     line-height: 1.1
 }
 
-.artist-name:hover {
+a.artist-name:hover {
     color: var(--color-accent-teal)
 }
 
