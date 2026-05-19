@@ -12486,31 +12486,40 @@ function dx() {
                 children: [{
                     title: "Be a Shaper",
                     desc: "Support the vision. Help co-create this festival from the inside. Open Call now live.",
-                    cta: "Open Call",
-                    href: "#"
+                    links: [{
+                        cta: "Open Call",
+                        href: "https://linktr.ee/otkriche.festival"
+                    }]
                 }, {
                     title: "Buy Ticket",
                     desc: "Secure your access to Lightland Park. Available on Resident Advisor.",
-                    cta: "Buy on RA",
-                    href: "https://es.ra.co/events/2224720"
+                    links: [{
+                        cta: "Buy on RA",
+                        href: "https://es.ra.co/events/2224720"
+                    }, {
+                        cta: "Buy on site",
+                        href: "#tickets"
+                    }]
                 }, {
                     title: "Join Us",
                     desc: "Volunteer, vendor space, or media pass — shape the experience from within.",
-                    cta: "Open Call",
-                    href: "#"
+                    links: [{
+                        cta: "Open Call",
+                        href: "https://linktr.ee/otkriche.festival"
+                    }]
                 }].map(d => w.jsxs("div", {
                     className: "mp-way-card",
                     children: [w.jsx("h3", {
                         children: d.title
                     }), w.jsx("p", {
                         children: d.desc
-                    }), w.jsxs("a", {
-                        href: d.href,
-                        target: "_blank",
-                        rel: "noreferrer",
+                    }), d.links.map(l => w.jsxs("a", {
+                        href: l.href,
+                        target: l.href.startsWith("#") ? undefined : "_blank",
+                        rel: l.href.startsWith("#") ? undefined : "noreferrer",
                         className: "mp-link",
-                        children: [d.cta, " →"]
-                    })]
+                        children: [l.cta, " →"]
+                    }, l.cta))]
                 }, d.title))
             })]
         }), w.jsxs("section", {
