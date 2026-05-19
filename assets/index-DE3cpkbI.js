@@ -11478,29 +11478,42 @@ function ex({
                     className: "menu-logo"
                 })]
             })]
-        }), w.jsx("div", {
+        }), w.jsxs("div", {
             ref: s,
-            className: `menu-items ${t || c ? "active" : ""}`,
-            children: w.jsx("ul", {
+            className: `menu-items ${t || c ? "active" : ""} ${t ? "open" : "closed"}`,
+            onClick: _ => {
+                _.target === s.current && e()
+            },
+            children: [w.jsxs("ul", {
                 className: "menu-list",
-                children: g.map((p, x) => w.jsx("li", {
-                    ref: _ => l.current[x] = _,
-                    children: w.jsx("a", {
-                        href: `#${p.id}`,
-                        onClick: _ => {
-                            _.preventDefault();
-                            const m = document.getElementById(p.id);
-                            m && (window._lenis ? window._lenis.scrollTo(m, {
-                                offset: -80
-                            }) : m.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start"
-                            })), e()
-                        },
-                        children: p.label
-                    })
-                }, p.id))
-            })
+                children: [
+                    w.jsx("li", {
+                        className: "close-btn-li",
+                        children: w.jsx("button", {
+                            className: "menu-close-btn",
+                            onClick: e,
+                            children: "×"
+                        })
+                    }),
+                    ...g.map((p, x) => w.jsx("li", {
+                        ref: _ => l.current[x] = _,
+                        children: w.jsx("a", {
+                            href: `#${p.id}`,
+                            onClick: _ => {
+                                _.preventDefault();
+                                const m = document.getElementById(p.id);
+                                m && (window._lenis ? window._lenis.scrollTo(m, {
+                                    offset: -80
+                                }) : m.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                })), e()
+                            },
+                            children: p.label
+                        })
+                    }, p.id))
+                ]
+            })]
         })]
     })
 }
@@ -11630,36 +11643,38 @@ function ix() {
                 ease: "expo.out",
                 delay: .6
             });
-            const s = window.innerHeight * 5;
-            Q.create({
-                trigger: t.current,
-                start: "top top",
-                end: `+=${s}`,
-                pin: !0,
-                scrub: 1,
-                onUpdate: l => {
-                    const o = l.progress;
-                    if (e.current.forEach((a, u) => {
-                        if (!a) return;
-                        const c = Xp[u],
-                            h = Math.max(0, (o - c.delay) / (1 - c.delay)),
-                            f = Math.min(1, h * c.speed),
-                            d = 120,
-                            g = -30;
-                        let p;
-                        u === 0 ? p = 90 + (g - 90) * f : p = d + (g - d) * f;
-                        const x = rx[c.track],
-                            _ = x.y;
-                        a.style.left = `${p}%`, a.style.top = `${_}%`, x.align === "top" ? a.style.transform = "translateY(0)" : x.align === "center" ? a.style.transform = "translateY(-50%)" : x.align === "bottom" && (a.style.transform = "translateY(-100%)");
-                        let m = 1;
-                        p > 100 ? m = Math.max(0, (120 - p) / 20) : p < 0 && (m = Math.max(0, (p + 30) / 30)), a.style.opacity = m
-                    }), n.current) {
-                        const a = Math.max(0, 1 - o * 2),
-                            u = 1 - o * .3;
-                        n.current.style.opacity = a, n.current.style.transform = `translate(-50%, -50%) scale(${u})`
+            if (window.innerWidth > 768) {
+                const s = window.innerHeight * 5;
+                Q.create({
+                    trigger: t.current,
+                    start: "top top",
+                    end: `+=${s}`,
+                    pin: !0,
+                    scrub: 1,
+                    onUpdate: l => {
+                        const o = l.progress;
+                        if (e.current.forEach((a, u) => {
+                            if (!a) return;
+                            const c = Xp[u],
+                                h = Math.max(0, (o - c.delay) / (1 - c.delay)),
+                                f = Math.min(1, h * c.speed),
+                                d = 120,
+                                g = -30;
+                            let p;
+                            u === 0 ? p = 90 + (g - 90) * f : p = d + (g - d) * f;
+                            const x = rx[c.track],
+                                _ = x.y;
+                            a.style.left = `${p}%`, a.style.top = `${_}%`, x.align === "top" ? a.style.transform = "translateY(0)" : x.align === "center" ? a.style.transform = "translateY(-50%)" : x.align === "bottom" && (a.style.transform = "translateY(-100%)");
+                            let m = 1;
+                            p > 100 ? m = Math.max(0, (120 - p) / 20) : p < 0 && (m = Math.max(0, (p + 30) / 30)), a.style.opacity = m
+                        }), n.current) {
+                            const a = Math.max(0, 1 - o * 2),
+                                u = 1 - o * .3;
+                            n.current.style.opacity = a, n.current.style.transform = `translate(-50%, -50%) scale(${u})`
+                        }
                     }
-                }
-            })
+                })
+            }
         }, t);
         return () => i.revert()
     }, []);
@@ -11742,6 +11757,9 @@ function ix() {
                     src: nx,
                     alt: "Otkriće Festival",
                     className: "hero-wordmark"
+                }), w.jsx("p", {
+                    className: "hero-mobile-date",
+                    children: "14–16 August 2026"
                 }), w.jsx("a", {
                     href: "#tickets",
                     onClick: l => {
