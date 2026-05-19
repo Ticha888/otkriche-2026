@@ -655,7 +655,7 @@
 .mp-label {
     font-size: 2rem;
     font-weight: 400;
-    color: var(--color-accent-teal);
+    color: #f8fafc;
     text-transform: uppercase;
     letter-spacing: .22em;
     margin-bottom: var(--heading-margin-bottom)
