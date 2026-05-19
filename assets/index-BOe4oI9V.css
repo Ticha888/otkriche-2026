@@ -1815,7 +1815,7 @@ a.artist-name:hover {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 300;
     color: var(--color-text-main);
-    letter-spacing: .1em;
+    letter-spacing: -.02em;
     margin: 0
 }
 
