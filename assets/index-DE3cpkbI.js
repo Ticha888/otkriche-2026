@@ -12081,7 +12081,7 @@ function fx({
         }), l && w.jsx("div", {
             className: `stage-lineup-expanded ${i ? "closing" : ""}`,
             children: t.lineup === "TBA" || !Array.isArray(t.lineup) || t.lineup.length === 0 ? w.jsx("div", {
-                style: { padding: "1.5rem 0", color: "var(--color-text-muted)", fontSize: "1.1rem", fontFamily: "var(--font-main)", letterSpacing: "0.05em", textAlign: "left" },
+                style: { padding: "1.5rem 0", color: "#8c8c8c", fontSize: "1.1rem", fontFamily: "var(--font-main)", letterSpacing: "0.05em", textAlign: "left" },
                 children: "TBA"
             }) : w.jsx("div", {
                 className: "stage-lineup-columns",
@@ -12108,7 +12108,7 @@ function fx({
                                 children: h.name
                             }) : w.jsx("span", {
                                 className: "artist-name",
-                                style: { cursor: "default", pointerEvents: "none", color: h.name === "TBA" ? "var(--color-text-muted)" : undefined },
+                                style: { cursor: "default", pointerEvents: "none", color: h.name === "TBA" ? "#8c8c8c" : undefined },
                                 children: h.name
                             })]
                         }, f))
@@ -12495,7 +12495,7 @@ function dx() {
                     title: "Apply for the open call",
                     desc: "Support the vision. Help co-create this festival from the inside. Volunteer, vendor space, or media pass — shape the experience from within.",
                     links: [{
-                        cta: "Open Call",
+                        cta: "Apply for the open call",
                         href: "https://linktr.ee/otkriche.festival"
                     }]
                 }].map(d => w.jsxs("div", {

@@ -877,8 +877,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--heading-margin-bottom);
-    padding: var(--section-spacing-y) 0 0;
+    gap: calc(var(--heading-margin-bottom) * 1.33);
+    padding: calc(var(--section-spacing-y) * 1.33) 0 0;
     background: transparent;
     position: relative
 }
@@ -1102,7 +1102,7 @@
 }
 
 .mp-gallery-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #f8fafc;
     text-transform: uppercase;
