@@ -1553,7 +1553,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0;
-    border-top: 1px solid rgba(255, 255, 255, .08)
+    /* border-top: 1px solid rgba(255, 255, 255, .08) */
 }
 
 .stage-lineup-column {
@@ -1644,7 +1644,7 @@
 
     .stage-lineup-column {
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, .06);
+        /* border-bottom: 1px solid rgba(255, 255, 255, .06); */
         padding: 0 0 2rem
     }
 

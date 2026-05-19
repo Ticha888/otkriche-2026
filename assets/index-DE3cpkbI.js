@@ -12004,19 +12004,19 @@ const cx = [{
     id: "02",
     name: "Cave",
     desc: "Curated frequencies emerging from the shadows. A sonic exploration of deep techno and ambient textures across our primary sanctuaries.",
-    lineup: lx,
+    lineup: "TBA",
     defaultExpanded: !1
 }, {
     id: "03",
     name: "Wax",
     desc: "Dedicated to the warm, organic sounds of vinyl. A journey through deep grooves and sonic craftsmanship.",
-    lineup: ox,
+    lineup: "TBA",
     defaultExpanded: !1
 }, {
     id: "04",
     name: "Tijelo",
     desc: "A dedicated space for physical expression and somatic resonance. Where rhythm translates into movement.",
-    lineup: [],
+    lineup: "TBA",
     defaultExpanded: !1
 }];
 function fx({
@@ -12034,7 +12034,7 @@ function fx({
             return () => clearTimeout(u)
         }
     }, [n, l]);
-    const a = t.lineup.reduce((u, c) => (u[c.date] || (u[c.date] = []), u[c.date].push(c), u), {});
+    const a = Array.isArray(t.lineup) ? t.lineup.reduce((u, c) => (u[c.date] || (u[c.date] = []), u[c.date].push(c), u), {}) : {};
     return w.jsxs("div", {
         className: "stage-section",
         children: [w.jsx("div", {
@@ -12055,7 +12055,10 @@ function fx({
             })
         }), l && w.jsx("div", {
             className: `stage-lineup-expanded ${i ? "closing" : ""}`,
-            children: w.jsx("div", {
+            children: t.lineup === "TBA" || !Array.isArray(t.lineup) || t.lineup.length === 0 ? w.jsx("div", {
+                style: { padding: "1.5rem 0", color: "var(--color-text-muted)", fontSize: "1.1rem", fontFamily: "var(--font-main)", letterSpacing: "0.05em", textAlign: "left" },
+                children: "TBA"
+            }) : w.jsx("div", {
                 className: "stage-lineup-columns",
                 children: Object.entries(a).map(([u, c]) => w.jsxs("div", {
                     className: "stage-lineup-column",
