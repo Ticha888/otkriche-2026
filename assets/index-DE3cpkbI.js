@@ -11918,39 +11918,43 @@ const bp = {
     ],
     ax = [{
         question: "Can I leave the festival and re-enter it?",
-        answer: "Yes while your bracelet is active",
+        answer: "While the bracelet is active, there's a always an option of getting in and out of the festival area",
         isHtml: !1
     }, {
         question: "How do I get to the venue?",
-        answer: "Taxi rides is an easy way of getting to the festival, also transfer buses during the certain hours will be organised",
+        answer: "Taxi rides is the easiest way of getting to the festival, also shuttle buses to and from the festival during certain hours will be organised",
         isHtml: !1
     }, {
-        question: "Will there be food and bar spots at the festival?",
-        answer: "Besides constant Light Land restaurant area, several bars and foodcourt spots will be organised",
+        question: "Will there be bar and food spots at the festival?",
+        answer: "Besides permanent Land Light restaurant area, several other bars and foodcourt spots will be arranged within the festival area",
         isHtml: !1
     }, {
         question: "Should I bring warm and waterproof clothes?",
-        answer: "Yes, totally, the temperature drops at night and it might rain, so it's essential to bring warm and waterproof clothes",
-        isHtml: !1
+        answer: "It's essential to bring warm and waterproof clothes.<br>The temperature drops at night and there is always a possibility of rain. Hoodies, light autumn with the pants would be enough.",
+        isHtml: !0
     }, {
         question: "What are the payment methods at the festival?",
-        answer: "Otkriće tokens is an official currency at the festival and can be acquired at the festival",
+        answer: "Otkriće tokens is an official currency at the festival and can be acquired at the gates area.",
         isHtml: !1
     }, {
         question: "Can I buy the ticket at the entrance?",
-        answer: "Yes, but at a higher cost",
+        answer: "Yes, but at a higher, door entry cost",
         isHtml: !1
     }, {
-        question: "How's the internet connection in the Light Land",
-        answer: "Internet connection is good and stable, but weak at certain places of Light Land.",
+        question: "How's the internet connection in the Light Land?",
+        answer: "Internet connection is good and stable in the restaurant area, but can be weak in the other parts of Light Land.",
         isHtml: !1
     }, {
-        question: "What about the camping and possible guesthouse accomodation?",
-        answer: "We'll set a camping hotel with sleeping bags, tents for a price to be announced later",
+        question: "Is it possible to charge devices at the festival?",
+        answer: "The charging station for everyone will be arranged",
+        isHtml: !1
+    }, {
+        question: "What about the accommodation at the festival?",
+        answer: "A camping hotel area with sleeping bags, tents, toilet and showers area will be organised",
         isHtml: !1
     }, {
         question: "Is there a way to take part in the festival?",
-        answer: 'Yes, we welcome shapers, volunteers, photographers and videographers, visual and digital artists and masters of practices. The open call for these positions is active until the end of July. <a href="#ways-to-join" style="color: var(--color-accent-teal); text-decoration: underline;">Open Call</a>',
+        answer: 'We still welcome shapers, volunteers, photographers, videographers, visual, digital artists and masters of practices. The <a href="#ways-to-join" style="color: var(--color-accent-teal); text-decoration: underline;">open call</a> for these positions is active until the end of July.',
         isHtml: !0
     }];
 
@@ -12232,7 +12236,7 @@ function dx() {
                 className: "mp-about-header",
                 children: [w.jsx("h2", {
                     className: "mp-about-title",
-                    children: "Otkriche is an experience that transcends the ordinary"
+                    children: "Otkriche is transcening the ordinary"
                 }), w.jsx("p", {
                     className: "mp-about-subtitle",
                     children: "Set within the heart of ancient woodlands, our gathering invites you to shed the synthetic world and rediscover the resonance of natural rhythm and sonic exploration."
@@ -12381,12 +12385,12 @@ function dx() {
                     className: "mp-tickets-date",
                     children: "14–16 August 2026"
                 }), w.jsx("p", {
-                    children: "Limited invitations available. Join the discovery."
+                    children: "Limited invitations are available."
                 }), w.jsx("a", {
                     title: "Online ticketing software",
-                    href: "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=c1c1c1",
+                    href: "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=4E4E4E",
                     className: "weezevent-widget-integration",
-                    "data-src": "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=c1c1c1",
+                    "data-src": "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=4E4E4E",
                     "data-width": "650",
                     "data-height": "600",
                     "data-id": "2036561",
@@ -12409,7 +12413,7 @@ function dx() {
                 children: w.jsx("p", {
                     "data-reveal": !0,
                     className: "mp-label",
-                    children: "EXPERIENCE AND EVENTS"
+                    children: "EXPERIENCE"
                 })
             }), w.jsxs("div", {
                 className: "mp-experience-grid",
@@ -12492,14 +12496,14 @@ function dx() {
             }), w.jsx("div", {
                 className: "mp-ways-grid",
                 children: [{
-                    title: "Be a Shaper",
+                    title: "Be a shaper",
                     desc: "Support the vision. Help co-create this festival from the inside. Open Call now live.",
                     links: [{
                         cta: "Open Call",
                         href: "https://linktr.ee/otkriche.festival"
                     }]
                 }, {
-                    title: "Buy Ticket",
+                    title: "Buy a ticket",
                     desc: "Secure your access to Lightland Park. Available on Resident Advisor or on this site",
                     links: [{
                         cta: "Buy on RA",
@@ -12509,7 +12513,7 @@ function dx() {
                         href: "#tickets"
                     }]
                 }, {
-                    title: "Join Us",
+                    title: "Join us",
                     desc: "Volunteer, vendor space, or media pass — shape the experience from within.",
                     links: [{
                         cta: "Open Call",
