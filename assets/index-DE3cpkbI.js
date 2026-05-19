@@ -12371,7 +12371,7 @@ function dx() {
                     className: "mp-tickets-date",
                     children: "14–16 August 2026"
                 }), w.jsx("p", {
-                    children: "Limited invitations are available"
+                    children: "Tickets are limited"
                 }), w.jsx("a", {
                     title: "Online ticketing software",
                     href: "https://widget.weezevent.com/ticket/E2036561/?code=38698&locale=en-GB&width_auto=1&color_primary=4E4E4E",
