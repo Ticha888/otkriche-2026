@@ -11933,8 +11933,6 @@ const bp = {
             src: "/assets/images/image27.webp"
         }, {
             src: "/assets/images/image28.webp"
-        }, {
-            src: "/assets/images/image35.webp"
         }]
     ],
     ax = [{
@@ -12408,7 +12406,7 @@ function dx() {
                     children: [w.jsx("div", {
                         className: "mp-exp-bg",
                         style: {
-                            backgroundImage: "url(/assets/images/image17.webp)"
+                            backgroundImage: "url(/assets/images/new_img/tijelo.png)"
                         }
                     }), w.jsxs("div", {
                         className: "mp-exp-content",
@@ -12453,7 +12451,7 @@ function dx() {
                     children: [w.jsx("div", {
                         className: "mp-exp-bg",
                         style: {
-                            backgroundImage: "url(/assets/images/image22.webp)"
+                            backgroundImage: "url(/assets/images/new_img/nature_1.png)"
                         }
                     }), w.jsxs("div", {
                         className: "mp-exp-content",

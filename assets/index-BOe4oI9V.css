@@ -877,8 +877,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(var(--heading-margin-bottom) * 1.33);
-    padding: calc(var(--section-spacing-y) * 1.33) 0 0;
+    gap: calc(var(--heading-margin-bottom) * 2);
+    padding: calc(var(--section-spacing-y) * 2) 0 0;
     background: transparent;
     position: relative
 }
