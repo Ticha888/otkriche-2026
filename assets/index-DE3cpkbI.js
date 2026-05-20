@@ -11570,34 +11570,40 @@ function tx({
 Ee.registerPlugin(Q);
 const nx = "/assets/logo-otkrice.svg",
     Xp = [{
-        src: "/assets/images/image25.webp",
+        src: "/assets/images/new_img/nature_10.png",
         size: "small",
         track: "middle",
         delay: 0,
         speed: 1.4
     }, {
-        src: "/assets/images/image2.webp",
+        src: "/assets/images/new_img/Montenegro%2025%20-%20Otkriche---_DSF1404-X100VI-Aug%2029%202025.jpg",
         size: "small",
         track: "top",
         delay: .1,
         speed: 1.4
     }, {
-        src: "/assets/images/image35.webp",
+        src: "/assets/images/IMG_5927.png",
         size: "small",
         track: "bottom",
         delay: .2,
         speed: 1.5
     }, {
-        src: "/assets/images/image4.webp",
+        src: "/assets/images/new_img/DSC06858.jpg",
         size: "small",
         track: "middle",
         delay: .3,
         speed: 1.3
     }, {
-        src: "/assets/images/image1.webp",
+        src: "/assets/images/IMG_5937.png",
         size: "small",
         track: "top",
         delay: .4,
+        speed: 1.2
+    }, {
+        src: "/assets/images/new_img/IMG_3047.jpg",
+        size: "small",
+        track: "bottom",
+        delay: .5,
         speed: 1
     }],
     rx = {
@@ -11903,38 +11909,67 @@ const bp = {
         time: "TBA",
         date: "TBA"
     }],
-    Qp = [
-        [{
-            src: "/assets/images/image1.webp"
-        }, {
-            src: "/assets/images/image2.webp"
-        }, {
-            src: "/assets/images/image4.webp"
-        }, {
-            src: "/assets/images/image5.webp"
-        }, {
-            src: "/assets/images/image7.webp"
-        }, {
-            src: "/assets/images/image9.webp"
-        }, {
-            src: "/assets/images/image16.webp"
-        }, {
-            src: "/assets/images/image19.webp"
-        }],
-        [{
-            src: "/assets/images/image21.webp"
-        }, {
-            src: "/assets/images/image24.webp"
-        }, {
-            src: "/assets/images/image25.webp"
-        }, {
-            src: "/assets/images/image26.webp"
-        }, {
-            src: "/assets/images/image27.webp"
-        }, {
-            src: "/assets/images/image28.webp"
-        }]
-    ],
+    Qp = [{
+        src: "/assets/images/new_img/DSC06826.jpg"
+    }, {
+        src: "/assets/images/new_img/DSC06858.jpg"
+    }, {
+        src: "/assets/images/new_img/DSC06867.jpg"
+    }, {
+        src: "/assets/images/new_img/IMG_2937.jpg"
+    }, {
+        src: "/assets/images/new_img/IMG_3030.jpg"
+    }, {
+        src: "/assets/images/new_img/IMG_3047.jpg"
+    }, {
+        src: "/assets/images/new_img/IMG_3257.jpg"
+    }, {
+        src: "/assets/images/new_img/IMG_3267.jpg"
+    }, {
+        src: "/assets/images/new_img/Montenegro%2025%20-%20Otkriche---_DSF1206-X100VI-Aug%2029%202025.jpg"
+    }, {
+        src: "/assets/images/new_img/Montenegro%2025%20-%20Otkriche---_DSF1223-X100VI-Aug%2029%202025.jpg"
+    }, {
+        src: "/assets/images/new_img/Montenegro%2025%20-%20Otkriche---_DSF1286-X100VI-Aug%2029%202025.jpg"
+    }, {
+        src: "/assets/images/new_img/Montenegro%2025%20-%20Otkriche---_DSF1368-X100VI-Aug%2029%202025.jpg"
+    }, {
+        src: "/assets/images/new_img/Montenegro%2025%20-%20Otkriche---_DSF1404-X100VI-Aug%2029%202025.jpg"
+    }, {
+        src: "/assets/images/new_img/_Q4A6132.png"
+    }, {
+        src: "/assets/images/new_img/nature_2.png"
+    }, {
+        src: "/assets/images/new_img/nature_3.png"
+    }, {
+        src: "/assets/images/new_img/nature_4.png"
+    }, {
+        src: "/assets/images/new_img/nature_5.png"
+    }, {
+        src: "/assets/images/new_img/nature_6.png"
+    }, {
+        src: "/assets/images/new_img/nature_7.png"
+    }, {
+        src: "/assets/images/new_img/nature_8.png"
+    }, {
+        src: "/assets/images/new_img/nature_9.png"
+    }, {
+        src: "/assets/images/new_img/nature_10.png"
+    }, {
+        src: "/assets/images/new_img/tijelo.png"
+    }, {
+        src: "/assets/images/image4.webp"
+    }, {
+        src: "/assets/images/image5.webp"
+    }, {
+        src: "/assets/images/image7.webp"
+    }, {
+        src: "/assets/images/image9.webp"
+    }, {
+        src: "/assets/images/image19.webp"
+    }, {
+        src: "/assets/images/image25.webp"
+    }],
     ax = [{
         question: "Can I leave the festival and re-enter it?",
         answer: "While the bracelet is active, there's a always an option of getting in and out of the festival area",
@@ -12127,6 +12162,44 @@ function dx() {
         [l, o] = H.useState(0),
         [a, u] = H.useState(null),
         [c, h] = H.useState(!1),
+        v = H.useRef({
+            active: !1,
+            startX: 0,
+            deltaX: 0,
+            pointerId: null
+        }),
+        y = H.useRef(!1),
+        m = H.useMemo(() => {
+            const d = [...Qp];
+            for (let g = d.length - 1; g > 0; g--) {
+                const p = Math.floor(Math.random() * (g + 1));
+                [d[g], d[p]] = [d[p], d[g]]
+            }
+            const x = [];
+            for (let g = 0; g < d.length; g += 8) x.push(d.slice(g, g + 8));
+            return x
+        }, []),
+        b = 50,
+        E = d => {
+            m.length > 1 && (v.current.active = !0, v.current.startX = d.clientX, v.current.deltaX = 0, v.current.pointerId = d.pointerId, y.current = !1, d.pointerType !== "mouse" && d.currentTarget.setPointerCapture && d.currentTarget.setPointerCapture(d.pointerId))
+        },
+        N = d => {
+            v.current.active && (v.current.pointerId === null || d.pointerId === v.current.pointerId) && (v.current.deltaX = d.clientX - v.current.startX)
+        },
+        A = d => {
+            if (!v.current.active || v.current.pointerId !== null && d.pointerId !== v.current.pointerId) return;
+            const g = v.current.deltaX;
+            if (v.current.active = !1, v.current.pointerId = null, Math.abs(g) < b) {
+                if (d.pointerType === "mouse") {
+                    const p = d.target instanceof Element ? d.target.closest(".mp-gallery-item") : null,
+                        x = p ? p.querySelector("img") : null,
+                        _ = x ? x.getAttribute("src") : null;
+                    _ && u(_)
+                }
+                return
+            }
+            y.current = !0, o(p => g < 0 ? Math.min(m.length - 1, p + 1) : Math.max(0, p - 1))
+        },
         f = () => {
             h(!0), setTimeout(() => {
                 u(null), h(!1)
@@ -12523,7 +12596,11 @@ function dx() {
                 })
             }), w.jsx("div", {
                 className: "mp-gallery-grid-container",
-                children: Qp.map((d, g) => w.jsx("div", {
+                onPointerDown: E,
+                onPointerMove: N,
+                onPointerUp: A,
+                onPointerCancel: A,
+                children: m.map((d, g) => w.jsx("div", {
                     className: `mp-gallery-grid ${l === g ? "active" : ""}`,
                     style: {
                         display: l === g ? "grid" : "none"
@@ -12531,7 +12608,13 @@ function dx() {
                     children: d.map((p, x) => w.jsx("div", {
                         className: "mp-gallery-item",
                         ref: _ => l === g && (t.current[x] = _),
-                        onClick: () => u(p.src),
+                        onClick: () => {
+                            if (y.current) {
+                                y.current = !1;
+                                return
+                            }
+                            u(p.src)
+                        },
                         children: w.jsx("img", {
                             src: p.src,
                             alt: "Festival moment"
@@ -12540,7 +12623,7 @@ function dx() {
                 }, g))
             }), w.jsx("div", {
                 className: "mp-gallery-dots",
-                children: Qp.map((d, g) => w.jsx("button", {
+                children: m.map((d, g) => w.jsx("button", {
                     className: `mp-gallery-dot ${l === g ? "active" : ""}`,
                     onClick: () => o(g),
                     "aria-label": `Go to page ${g + 1}`

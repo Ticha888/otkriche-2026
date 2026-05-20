@@ -164,9 +164,12 @@
 .loading-wrapper {
     position: fixed;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,6 +179,13 @@
     overflow: hidden;
     -webkit-user-select: none;
     user-select: none
+}
+
+@supports (height: 100dvh) {
+    .loading-wrapper {
+        height: 100dvh;
+        min-height: 100dvh
+    }
 }
 
 .loading-logo {
@@ -929,7 +939,7 @@
     line-height: 1.1;
     margin: 0;
     letter-spacing: -.02em;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 
 .mp-about-subtitle {
@@ -1114,9 +1124,15 @@
 .mp-gallery-grid-container {
     width: 100%;
     max-width: 1600px;
-    height: 600px;
+    height: 680px;
     position: relative;
-    flex-shrink: 0
+    flex-shrink: 0;
+    touch-action: pan-y;
+    cursor: grab
+}
+
+.mp-gallery-grid-container:active {
+    cursor: grabbing
 }
 
 .mp-gallery-grid {
@@ -1192,7 +1208,7 @@
 
 @media (max-width: 1024px) {
     .mp-gallery-grid-container {
-        height: 500px
+        height: 560px
     }
 
     .mp-gallery-grid {
@@ -1202,7 +1218,7 @@
 
 @media (max-width: 768px) {
     .mp-gallery-grid-container {
-        height: 450px
+        height: 560px
     }
 
     .mp-gallery-grid {
@@ -2630,6 +2646,21 @@ button {
     /* 1. Remove left menu */
     .hero-left-mid {
         display: none !important;
+    }
+
+    .hero-top-left {
+        left: 1rem !important;
+        top: 1.25rem !important;
+        right: 5.75rem !important;
+    }
+
+    .hero-site-sub {
+        max-width: 100%;
+        font-size: .92rem;
+        line-height: 1.35;
+        letter-spacing: .03em;
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     /* 2. Remove carousel on scroll */
