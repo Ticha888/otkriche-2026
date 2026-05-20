@@ -496,6 +496,10 @@
     border-color: #ffffff8c
 }
 
+.hero-ticket-link {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .hero-center {
         width: 80%
@@ -888,7 +892,8 @@
     flex-direction: column;
     align-items: center;
     gap: calc(var(--heading-margin-bottom) * 2);
-    padding: calc(var(--section-spacing-y) * 2) 0 0;
+    padding: calc(var(--heading-margin-bottom) * 2) 0 90px;
+    /* padding: calc(var(--section-spacing-y) * 2) 0 0; */
     background: transparent;
     position: relative
 }
@@ -939,7 +944,13 @@
     line-height: 1.1;
     margin: 0;
     letter-spacing: -.02em;
-    white-space: pre-wrap;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .mp-about-title {
+        white-space: pre-wrap;
+    }
 }
 
 .mp-about-subtitle {
@@ -963,7 +974,7 @@
 
 .mp-about-card {
     position: relative;
-    min-height: 38vh;
+    min-height: 34vh;
     overflow: hidden;
     transition: all .6s cubic-bezier(.4, 0, .2, 1)
 }
@@ -1005,7 +1016,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem;
+    padding: 2rem 4rem 2rem 4rem;
     gap: 2rem
 }
 
@@ -1081,7 +1092,7 @@
     }
 
     .mp-about-card {
-        min-height: 45vh
+        min-height: 35vh
     }
 
     .mp-about-card-content {
@@ -2265,9 +2276,13 @@ a.artist-name:hover {
 .mp-way-card p {
     font-size: .95rem;
     font-weight: 300;
-    color: var(--color-text-muted);
+    color: #fff9;
     line-height: 1.75;
     flex: 1
+}
+
+.mp-way-card .mp-link[href*="ra.co/events/2224720"] {
+    display: none !important;
 }
 
 .mp-tickets {
